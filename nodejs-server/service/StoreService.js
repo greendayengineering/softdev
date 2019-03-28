@@ -1,0 +1,108 @@
+'use strict';
+
+
+/**
+ * Delete purchase order by ID
+ * For valid response try integer IDs with positive integer value.\\ \\ Negative or non-integer values will generate API errors
+ *
+ * orderId Long ID of the order that needs to be deleted
+ * no response value expected for this operation
+ **/
+exports.deleteOrder = function(orderId) {
+  return new Promise(function(resolve, reject) {
+    resolve();
+  });
+}
+
+
+/**
+ * Returns dongle inventories by status
+ * Returns a map of status codes to quantities
+ *
+ * returns Map
+ **/
+exports.getInventory = function() {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "key" : 0
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Find purchase order by ID
+ * For valid response try integer IDs with value >= 1 and <= 10.\\ \\ Other values will generated exceptions
+ *
+ * orderId Long ID of dongle that needs to be fetched
+ * returns Order
+ **/
+exports.getOrderById = function(orderId) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "quantity" : 5,
+  "address" : {
+    "addressLineTwo" : "addressLineTwo",
+    "town" : "town",
+    "city" : "city",
+    "addressLineOne" : "addressLineOne",
+    "addressLineThree" : "addressLineThree"
+  },
+  "dongleId" : 1,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "customerId" : 6,
+  "id" : 0,
+  "complete" : false,
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "placed"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
+
+/**
+ * Place an order for a dongle
+ *
+ * body Order order placed for purchasing the dongle
+ * returns Order
+ **/
+exports.placeOrder = function(body) {
+  return new Promise(function(resolve, reject) {
+    var examples = {};
+    examples['application/json'] = {
+  "quantity" : 5,
+  "address" : {
+    "addressLineTwo" : "addressLineTwo",
+    "town" : "town",
+    "city" : "city",
+    "addressLineOne" : "addressLineOne",
+    "addressLineThree" : "addressLineThree"
+  },
+  "dongleId" : 1,
+  "endDate" : "2000-01-23T04:56:07.000+00:00",
+  "customerId" : 6,
+  "id" : 0,
+  "complete" : false,
+  "startDate" : "2000-01-23T04:56:07.000+00:00",
+  "status" : "placed"
+};
+    if (Object.keys(examples).length > 0) {
+      resolve(examples[Object.keys(examples)[0]]);
+    } else {
+      resolve();
+    }
+  });
+}
+
