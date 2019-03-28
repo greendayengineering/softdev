@@ -545,7 +545,7 @@ paths:
 securityDefinitions:
   dongle_auth:
     type: "oauth2"
-    authorizationUrl: "http://petstore.swagger.io/oauth/dialog"
+    authorizationUrl: "http://dongleapp.swagger.io/oauth/dialog"
     flow: "implicit"
     scopes:
       write:dongles: "modify dongles in your account"
